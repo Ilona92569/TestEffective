@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_black"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp">
+
+        <View
+            android:id="@id/view_grey3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:background="@drawable/background_basic_grey3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_change_city"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/icon_change_city"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_city_from"
+            app:layout_constraintEnd_toEndOf="@id/view_grey3"
+            app:layout_constraintTop_toTopOf="@id/edit_text_city_from" />
+
+        <ImageView
+            android:id="@+id/icon_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/icon_back"
+            app:layout_constraintBottom_toBottomOf="@id/view_grey3"
+            app:layout_constraintStart_toStartOf="@+id/view_grey3"
+            app:layout_constraintTop_toTopOf="@id/view_grey3" />
+
+        <EditText
+            android:id="@+id/edit_text_city_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_basic_grey3"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:hint="@string/city_from"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/basic_grey6"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/view_grey3"
+            app:layout_constraintTop_toTopOf="@id/view_grey3" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/background_basic_grey5"
+            app:layout_constraintBottom_toTopOf="@id/edit_text_city_to"
+            app:layout_constraintEnd_toEndOf="@id/view_grey3"
+            app:layout_constraintStart_toStartOf="@id/view_grey3"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_city_from" />
+
+
+        <EditText
+            android:id="@+id/edit_text_city_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background_basic_grey3"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:hint="@string/city_to"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/basic_grey6"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_grey3"
+            app:layout_constraintStart_toStartOf="@id/view_grey3" />
+
+        <ImageView
+            android:id="@+id/icon_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_close"
+            app:layout_constraintBottom_toBottomOf="@id/edit_text_city_to"
+            app:layout_constraintEnd_toEndOf="@id/view_grey3"
+            app:layout_constraintTop_toTopOf="@id/edit_text_city_to" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_add_back_ticket"
+                style="@style/ButtonChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/background_basic_grey3"
+                android:backgroundTint="@color/basic_grey3"
+                android:drawablePadding="6dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/back"
+                tools:drawableStart="@drawable/icon_plus" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_date"
+                style="@style/ButtonChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/background_basic_grey3"
+                android:backgroundTint="@color/basic_grey3"
+                android:text="@string/date" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_people"
+                style="@style/ButtonChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/background_basic_grey3"
+                android:backgroundTint="@color/basic_grey3"
+                android:drawablePadding="6dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/people"
+                tools:drawableStart="@drawable/icon_people" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_filter"
+                style="@style/ButtonChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/background_basic_grey3"
+                android:backgroundTint="@color/basic_grey3"
+                android:drawablePadding="6dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/filter"
+                tools:drawableStart="@drawable/icon_filter" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_basic_grey1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            style="@style/TextView_Headings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="@string/straight_rails"
+            android:textSize="20sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_straight_flight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_straight_flight" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_show_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_blue_corner"
+        android:fontFamily="@font/sf_pro_display_regular_italic"
+        android:text="@string/view_all_tickets"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

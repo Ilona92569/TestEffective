@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestEffective</string>
+    <string name="flights">Авиабилеты</string>
+    <string name="hotels">Отели</string>
+    <string name="brief">Короче</string>
+    <string name="subscriptions">Подписки</string>
+    <string name="profile">Профиль</string>
+</resources>

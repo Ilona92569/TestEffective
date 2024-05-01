@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_air_tickets"
+    app:startDestination="@id/airTicketsFragment">
+
+    <fragment
+        android:id="@+id/airTicketsFragment"
+        android:name="com.example.testeffective.feature.ui.airtickets.AirTicketsFragment"
+        android:label="AirTicketsFragment" >
+        <action
+            android:id="@+id/action_airTicketsFragment_to_stubFragment5"
+            app:destination="@id/stubFragment5" />
+        <action
+            android:id="@+id/action_airTicketsFragment_to_countrySelectedFragment"
+            app:destination="@id/countrySelectedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stubFragment5"
+        android:name="com.example.testeffective.feature.ui.stub.StubFragment"
+        android:label="StubFragment" />
+    <fragment
+        android:id="@+id/countrySelectedFragment"
+        android:name="com.example.testeffective.feature.ui.countryselected.CountrySelectedFragment"
+        android:label="CountrySelectedFragment" >
+        <argument
+            android:name="CITY_FROM"
+            app:argType="string" />
+        <argument
+            android:name="CITY_TO"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_countrySelectedFragment_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.example.testeffective.feature.ui.alltickets.AllTicketsFragment"
+        android:label="AllTicketsFragment" >
+        <argument
+            android:name="CITY_FROM"
+            app:argType="string" />
+        <argument
+            android:name="CITY_TO"
+            app:argType="string" />
+        <argument
+            android:name="DATE"
+            app:argType="string" />
+    </fragment>
+</navigation>

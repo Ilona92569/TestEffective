@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic_black"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_search"
+        style="@style/TextView_Headings"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:gravity="center"
+        android:text="@string/search_for_cheap_flights" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="36dp">
+
+        <View
+            android:id="@+id/view_grey3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_basic_grey3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@id/view_grey4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:background="@drawable/background_basic_grey4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/icon_search"
+            app:layout_constraintBottom_toBottomOf="@id/view_grey4"
+            app:layout_constraintStart_toStartOf="@+id/view_grey4"
+            app:layout_constraintTop_toTopOf="@id/view_grey4" />
+
+        <EditText
+            android:id="@+id/edit_text_city_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_basic_grey4"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:hint="@string/city_from"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/basic_grey6"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/view_grey4"
+            app:layout_constraintTop_toTopOf="@id/view_grey4" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/background_basic_grey5"
+            app:layout_constraintBottom_toTopOf="@id/edit_text_city_to"
+            app:layout_constraintEnd_toEndOf="@id/view_grey4"
+            app:layout_constraintStart_toStartOf="@id/edit_text_city_from"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_city_from" />
+
+
+        <TextView
+            android:id="@+id/edit_text_city_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="49dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background_basic_grey4"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:hint="@string/city_to"
+            android:textColor="@color/white"
+            android:textColorHint="@color/basic_grey6"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_grey4"
+            app:layout_constraintStart_toStartOf="@id/view_grey4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        style="@style/TextView_Headings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:text="@string/fly_away_musically" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_travel_offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_travel_offers" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
